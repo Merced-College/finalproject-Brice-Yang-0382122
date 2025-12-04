@@ -1,4 +1,4 @@
-//Stack-LIFO of move history
+//Stack-LIFO for move history
 public class moveHistory {
     
 }

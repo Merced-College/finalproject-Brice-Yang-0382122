@@ -1,0 +1,33 @@
+chessBoard - double array
+EVERY PIECE NEEDS THEIR OWN CLASS
+moveHistory - linkedList/Stack
+chessOpenings - Array of some kind?
+pawnPromotion -  Perhaps needs own class for nicer documentation. Probably just some 'if' Method I can check after every turn.
+findCheck - After every turn I should run this function to see if the King is in Check
+findCheckMate - Similar. Except this might be more difficult.
+findStalemate - Every turn. Check for Stalemate.
+
+ASCII - If I added ASCII it wouldn't be one big Print statement.  But multiple print statements. 
+    But maybe that would actually be easy within a multiarray holding characters?
+Moving pieces require a POSITION CALL. THE POSITON IS CHECKED. Then a move is suggested. Check if move is valid.
+
+CHESS NOTATION
+    https://en.wikipedia.org/wiki/Algebraic_notation_(chess)
+
+pawn.java and piece.java are not really needed I think?
+    Just work with the board. Check the position. Instead of creating new literal classes.
+
+Add:
+    Chessboard: 0
+    Pieces: 0
+    Captures: 0
+    Check: 0
+    Checkmate: 0
+    Stalemate: 0
+    Pawn promotion: 0
+    ASCII GRAPHICS MAYBE?: 0
+
+Won't add:
+    Castling: 0
+    Enpassant: 0
+    AI: 0
