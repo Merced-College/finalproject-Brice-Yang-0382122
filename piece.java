@@ -14,6 +14,16 @@ public class piece {
     String rank;
     private int xPosition;
     private int yPosition;
+    private String[][] chessBoard = {
+        {"[]","[]","[]","[]","[]","[]","[]","[]"},
+        {"[]","[]","[]","[]","[]","[]","[]","[]"},
+        {"[]","[]","[]","[]","[]","[]","[]","[]"},
+        {"[]","[]","[]","[]","[]","[]","[]","[]"},
+        {"[]","[]","[]","[]","[]","[]","[]","[]"},
+        {"[]","[]","[]","[]","[]","[]","[]","[]"},
+        {"[]","[]","[]","[]","[]","[]","[]","[]"},
+        {"[]","[]","[]","[]","[]","[]","[]","[]"}
+        };
 
 //--------------------------------------------------------------
 
@@ -21,8 +31,10 @@ public class piece {
         this.rank = "Pawn";
         this.xPosition = 0;
         this.yPosition = 0;
+        this.chessBoard[1][1] = "doggy";
     }
 
+    
     public void setRank(String rank){
         this.rank = rank;
     }
@@ -38,6 +50,7 @@ public class piece {
 //--------------------------------------------------------------
 
     public String getRank(){
+        System.out.println(rank);
         return this.rank;
     }
 
