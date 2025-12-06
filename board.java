@@ -20,7 +20,7 @@ public static final String reset = "\u001B[0m";
 //------------------------------------------------------
 
 //Creates the 'chessBoard' multidimensional array
-    private String[][] chessBoard;
+    String[][] chessBoard;
 
 //------------------------------------------------------
 
@@ -41,7 +41,10 @@ public static final String reset = "\u001B[0m";
         for (int i = 0; i < this.chessBoard.length; i++) { //iterates through rows
             for (int j = 0; j < this.chessBoard[i].length; j++) { //iterates through columns
                 if (this.chessBoard[i][j].equals("*")) {
-                    System.out.print( grey + this.chessBoard[i][j] + " ");
+                    System.out.print(this.chessBoard[i][j] + " ");
+                }
+                else{
+                    System.out.print( this.chessBoard[i][j] + " ");
                 }
             }
             System.out.println();
@@ -50,9 +53,37 @@ public static final String reset = "\u001B[0m";
 
 //------------------------------------------------------
 
-    //Updates the chessBoard array data set. A single piece at a time. Not a full board update.
-    public void updateBoard(int x, int y, String piece){
-        this.chessBoard[x][y] = piece;
+public void startingBoard(){
+
+    for (int i = 0; i < this.chessBoard.length; i++){
+        updateBoard(i,6,"P");
+        updateBoard(i,1,"p");
+    }
+            updateBoard(0,7,"R");
+            updateBoard(1,7,"N");
+            updateBoard(2,7,"B");
+            updateBoard(3,7,"Q");
+            updateBoard(4,7,"K");
+            updateBoard(5,7,"B");
+            updateBoard(6,7,"N");
+            updateBoard(7,7,"R");
+
+            updateBoard(0,0,"r");
+            updateBoard(1,0,"n");
+            updateBoard(2,0,"b");
+            updateBoard(3,0,"q");
+            updateBoard(4,0,"k");
+            updateBoard(5,0,"b");
+            updateBoard(6,0,"n");
+            updateBoard(7,0,"r");
+}
+
+
+//------------------------------------------------------
+
+    //Updates the chessBoard array data set. A single piece a a time. Not a full board update. This is only a visual console change.
+    public void updateBoard(int x, int y, String rank){
+        this.chessBoard[y][x] = rank;
     }
 
 //------------------------------------------------------

@@ -14,16 +14,6 @@ public class piece {
     String rank;
     private int xPosition;
     private int yPosition;
-    private String[][] chessBoard = {
-        {"[]","[]","[]","[]","[]","[]","[]","[]"},
-        {"[]","[]","[]","[]","[]","[]","[]","[]"},
-        {"[]","[]","[]","[]","[]","[]","[]","[]"},
-        {"[]","[]","[]","[]","[]","[]","[]","[]"},
-        {"[]","[]","[]","[]","[]","[]","[]","[]"},
-        {"[]","[]","[]","[]","[]","[]","[]","[]"},
-        {"[]","[]","[]","[]","[]","[]","[]","[]"},
-        {"[]","[]","[]","[]","[]","[]","[]","[]"}
-        };
 
 //--------------------------------------------------------------
 
@@ -31,7 +21,6 @@ public class piece {
         this.rank = "Pawn";
         this.xPosition = 0;
         this.yPosition = 0;
-        this.chessBoard[1][1] = "doggy";
     }
 
     
@@ -39,11 +28,8 @@ public class piece {
         this.rank = rank;
     }
 
-    public void xSetPosition(int x){
+    public void SetPosition(int x, int y){
         this.xPosition = x;
-    }
-
-    public void ySetPosition(int y){
         this.yPosition = y;
     }
 
